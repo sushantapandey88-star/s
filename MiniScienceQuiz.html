@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Science Quiz</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    .content {
+        border: 1px solid black;
+        padding: 10px;  
+        margin: 10px 0;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        }
+    .content:hover{
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+</style>
+</head>
+<body>
+<div class="header">
+    <h1>Mini Science Quiz</h1>
+</div> 
+<div class="content">
+    <form id="quizForm">
+        <p><strong>1.Which of the following elements has the highest electronegativity value on the periodic table?</strong><br>
+    <input type="radio" name="q1" value="A"> A. Fluorine<br>
+    <input type="radio" name="q1" value="B"> B. Oxygen<br>
+    <input type="radio" name="q1" value="C"> C. Nitrogen<br>
+    <input type="radio" name="q1" value="D"> D. Chlorine<br>
+        </p>
+        <p><strong>What type of chemical bond is primarily responsible for holding the hydrogen and oxygen atoms together in a single molecule of water (H₂O)?</strong>
+            <input type="radio" name="q2" value="A"> A. Covalent<br>
+            <input type="radio" name="q2" value="B"> B. Ionic<br>
+            <input type="radio" name="q2" value="C"> C. Hydrogen<br>
+            <input type="radio" name="q2" value="D"> D. Metallic<br>
+        </p>
+        <p><strong>3. What is the chemical symbol for the element gold?</strong><br>
+            <input type="radio" name="q3" value="A"> A. Au<br>
+            <input type="radio" name="q3" value="B"> B. Ag<br>
+            <input type="radio" name="q3" value="C"> C. Gd<br>
+            <input type="radio" name="q3" value="D"> D. Ga<br>
+        </p>
+        <p>
+            <input type="submit" value="Submit Quiz">
+        </p>
+        </form>
+        </div>
+        <p>Answer Key:</p>
+        <ul>
+            <li>1. A. Fluorine</li>
+            <li>2. A. Covalent</li>
+            <li>3. A. Au</li>
+        </ul>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+      body{
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff;
+        margin: 20px;
+      }
+      select, textarea, input[type="radio"], button {
+        display: block;
+        margin: 10px 0;
+      }
+    </style>    
+</head>
+<body>
+  <h2>My Learning Experience</h2>
+  <label>Select Your Favorite Subject:</label>
+  <select id="subjectSelect">
+    <option value="math">Math</option>
+    <option value="science">Science</option>
+    <option value="history">History</option>
+    <option value="literature">Literature</option>
+  </select>
+  <label>A improvement that can be made:</label>
+  <textarea id="improvement" rows="4" cols="50"></textarea>
+    <label>Smiley Rating:</label>
+    <select id="smileyRating">
+        <option value="1">😞</option>
+        <option value="2">😐</option>
+        <option value="3">😊</option>
+        <option value="4">😁</option>
+    </select>
+    <label>Would you recommend this learning experience to others?</label>
+    <input type="radio" name="recommend" value="yes"> Yes
+    <input type="radio" name="recommend" value="no"> No
+    <label>Additional Comments:</label>
+    <textarea id="comments" rows="4" cols="50"></textarea>
+    <button id="submitBtn">Submit</button>
+    <div id="output"></div>
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            const subject = document.getElementById('subjectSelect').value;
+            const improvement = document.getElementById('improvement').value;
+            const smileyRating = document.getElementById('smileyRating').value;
+            const recommend = document.querySelector('input[name="recommend"]:checked') ? document.querySelector('input[name="recommend"]:checked').value : 'No response';
+            const comments = document.getElementById('comments').value;
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = `
+                <h3>Your Learning Experience Summary:</h3>
+                <p><strong>Favorite Subject:</strong> ${subject}</p>
+                <p><strong>Improvement Suggestion:</strong> ${improvement}</p>
+                <p><strong>Smiley Rating:</strong> ${smileyRating}</p>
+                <p><strong>Recommendation:</strong> ${recommend}</p>
+                <p><strong>Additional Comments:</strong> ${comments}</p>
+            `;
+        });
+    </script>
+</body>
+</html>

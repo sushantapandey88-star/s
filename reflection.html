@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflection</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 20px;
+        }
+        select, textarea, input[type="radio"], button {
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+  <h2>Three Reflections on My Learning Experience</h2>  
+  <textarea id="reflection" placeholder="1) ... 2) ... 3)" rows="6" cols="50"></textarea><br />
+    <button id="submitBtn">Submit</button>
+    <p id="extramsg"></p>
+    <script src="script.js">
+     const submitBtn = document.getElementById('submitBtn');
+        const reflectionTextarea = document.getElementById('reflection');
+        const extramsg = document.getElementById('extramsg');
+
+        submitBtn.addEventListener('click', function() {
+            const reflections = reflectionTextarea.value.trim();
+            if (reflections) {
+                extramsg.textContent = "Thank you for sharing your reflections!";
+            } else {
+                extramsg.textContent = "Please enter your reflections before submitting.";
+            }
+        });
+    </script>
+</body>
+</html>
